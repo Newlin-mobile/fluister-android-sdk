@@ -132,6 +132,7 @@ Body: {
 - **Material3** - Modern Material Design
 - **Kotlin Coroutines** - Async operations
 - **OkHttp 4.12** - HTTP client
+- **Google Play In-App Review** - Store review prompts
 - **AndroidX Core KTX** - Kotlin extensions
 
 ### Why OkHttp?

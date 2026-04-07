@@ -103,6 +103,7 @@
 
 - **Native Compose UI** - Modern, smooth Material3 design
 - **4 Emoji Sentiments** - Quick emotional feedback
+- **Auto Review Prompt** - Google Play in-app review after positive feedback
 - **Optional Message** - Detailed text feedback
 - **Email Collection** - Conditional, with explicit opt-in
 - **Auto Metadata** - App version, Android version, device model
@@ -115,10 +116,11 @@
 - **Jetpack Compose** - Modern declarative UI
 - **Kotlin-First** - 100% Kotlin, null-safe
 - **Coroutine-Based** - No main thread blocking
-- **Minimal Dependencies** - Compose + OkHttp only
+- **Minimal Dependencies** - Compose + OkHttp + Play Core Review
 - **JitPack-Ready** - Easy installation via Gradle
 - **ProGuard-Safe** - Works with code minification
 - **Android 7+** - API 24+ support (96%+ devices)
+- **Smart Review Timing** - Converts happy moments into 5-star ratings
 
 ## 📦 Distribution
 

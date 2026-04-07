@@ -4,7 +4,8 @@ import android.content.Context
 
 internal data class FluisterConfig(
     val apiKey: String,
-    val context: Context
+    val context: Context,
+    val reviewPromptEnabled: Boolean = true
 )
 
 internal data class WidgetConfig(

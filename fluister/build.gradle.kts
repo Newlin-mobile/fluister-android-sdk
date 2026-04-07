@@ -58,6 +58,10 @@ dependencies {
     // OkHttp
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     
+    // Google Play In-App Review
+    implementation("com.google.android.play:review:2.0.1")
+    implementation("com.google.android.play:review-ktx:2.0.1")
+    
     // AndroidX Core
     implementation("androidx.core:core-ktx:1.12.0")
 }

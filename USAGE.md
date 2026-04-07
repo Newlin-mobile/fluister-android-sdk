@@ -270,6 +270,28 @@ fun AppNavigation() {
 
 ## Advanced Configuration
 
+### Google Play In-App Review
+
+**Enabled by default.** After users submit positive feedback (😍 love or 😊 happy), the SDK automatically triggers Google's native in-app review prompt.
+
+**Benefits:**
+- Converts happy users into 5-star reviews
+- Non-intrusive (appears within your app, no redirect)
+- Respects Google's quotas (won't spam users)
+- Gracefully handles unavailability (emulator, sideloaded apps)
+
+**Disable if needed:**
+
+```kotlin
+Fluister.configure(
+    context = this,
+    apiKey = "your_api_key",
+    reviewPromptEnabled = false
+)
+```
+
+**Note:** Google Play controls when the prompt actually appears. It may not show every time due to quota limits designed to prevent review request fatigue.
+
 ### Automatic Metadata
 
 The SDK automatically collects:

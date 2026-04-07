@@ -57,6 +57,7 @@ private fun FeedbackSheetContent(
     val scope = rememberCoroutineScope()
     val api = Fluister.getApi()
     val context = Fluister.getContextData()
+    val activityContext = androidx.compose.ui.platform.LocalContext.current
     
     // Fetch config on mount
     LaunchedEffect(Unit) {
@@ -158,6 +159,10 @@ private fun FeedbackSheetContent(
                         
                         result.onSuccess {
                             submitState = SubmitState.Success
+                            
+                            // Request in-app review for positive feedback
+                            Fluister.requestInAppReview(activityContext, sentiment)
+                            
                             kotlinx.coroutines.delay(1000)
                             onDismiss()
                         }.onFailure {

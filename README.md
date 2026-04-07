@@ -9,7 +9,8 @@ Native Android SDK for collecting user feedback via the Fluister platform. Provi
 
 - ✨ **Native Compose UI** - Beautiful Material3 bottom sheet
 - 😊 **Emoji Sentiment** - Quick emotional feedback with 4 emoji options
-- ⚡ **Lightweight** - Minimal dependencies (Compose + OkHttp)
+- ⭐ **Auto Review Prompt** - Triggers Google Play in-app review after positive feedback
+- ⚡ **Lightweight** - Minimal dependencies (Compose + OkHttp + Play Core)
 - 🔒 **Privacy-First** - GDPR-compliant, optional email collection
 - 🎨 **Customizable** - Match your app's design
 - 📱 **Android 7+** - Support for API 24+
@@ -135,6 +136,30 @@ Fluister.setScreen("ProductDetail-${productId}")
 ```kotlin
 Fluister.setUserEmail("user@example.com")
 ```
+
+### Optional: Google Play Store Review Prompt
+
+By default, the SDK automatically shows the **Google Play In-App Review** prompt after users submit positive feedback (😍 love or 😊 happy sentiment).
+
+This native review flow:
+- ✅ Appears seamlessly within your app (no redirect to Play Store)
+- ✅ Only triggers after positive feedback
+- ✅ Respects Google's quota limits (won't spam users)
+- ✅ Gracefully falls back if Play Store not available (emulator/sideload)
+
+**Enabled by default.** To disable:
+
+```kotlin
+Fluister.configure(
+    context = this,
+    apiKey = "your_api_key",
+    reviewPromptEnabled = false  // ← Disable review prompt
+)
+```
+
+**Why this matters:** Users who just expressed positive sentiment are more likely to leave a 5-star review. This feature converts happy moments into Play Store ratings automatically.
+
+**Privacy note:** The review prompt is controlled by Google Play and never forces users to leave a review. It's a low-friction request that users can dismiss.
 
 ### Full example
 
